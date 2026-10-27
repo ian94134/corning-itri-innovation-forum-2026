@@ -8,4 +8,6 @@
 
 Claude Code 接手資訊請見 [CLAUDE.md](CLAUDE.md)。
 
+網站製作、優化與驗收項目請見 [WEB_SPEC.md](WEB_SPEC.md)。
+
 本機預覽：在此資料夾執行 `python -m http.server 8000`，再開啟 `http://localhost:8000/`。
