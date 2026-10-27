@@ -4,6 +4,8 @@
 
 網站包含論壇介紹、14 位講者、三場論壇的 25 筆議程，以及原始報名連結。桌面與手機版採響應式排版。
 
-[查看目前網站](https://corning-itri-innovation-2026.iccoursedomain5.chatgpt.site/)
+[瀏覽 GitHub Pages 網站](https://ian94134.github.io/corning-itri-innovation-forum-2026/)
+
+Claude Code 接手資訊請見 [CLAUDE.md](CLAUDE.md)。
 
 本機預覽：在此資料夾執行 `python -m http.server 8000`，再開啟 `http://localhost:8000/`。
