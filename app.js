@@ -5,22 +5,20 @@ const AGENDA_META = [
   {heading: '專題論壇 II'}
 ];
 
-function splitRole(role) {
+function roleHtml(role) {
   const [org, ...rest] = role.split('｜');
-  return {isCorning: org === 'Corning', title: rest.join('｜')};
+  return `<span class="role-org ${org === 'Corning' ? 'corning' : 'itri'}">${org}</span>｜${rest.join('｜')}`;
 }
 
 function renderSpeakers(filter = 'all') {
   const list = speakers.filter(s => filter === 'all' || s[0] === filter);
   document.getElementById('filter-status').textContent = (filter === 'all' ? '全部講者' : filter) + ' · ' + list.length + ' 位';
   document.getElementById('speaker-grid').innerHTML = list.map(s => {
-    const r = splitRole(s[2]);
     return `<article class="speaker-card">
       <div class="speaker-photo"><img loading="lazy" width="400" height="400" src="assets/${s[4]}" alt="${s[1]}"><span class="forum-tag">${s[0]}</span></div>
       <div class="speaker-body">
-        <p class="speaker-org ${r.isCorning ? 'corning' : 'itri'}">${r.isCorning ? 'CORNING' : 'ITRI 工研院'}</p>
         <h3>${s[1]}</h3>
-        <p class="speaker-title">${r.title}</p>
+        <p class="speaker-title">${roleHtml(s[2])}</p>
         <div class="speaker-topic"><p class="topic-label">演講主題 / Topic</p><p class="topic-text">${s[3]}</p></div>
       </div>
     </article>`;
@@ -38,7 +36,7 @@ function renderAgenda(i) {
 
   function person(id) {
     const s = speakers[id];
-    return `<div class="talk-person"><img src="assets/${s[4]}" width="44" height="44" loading="lazy" alt=""><div><strong>${s[1]}</strong><span>${s[2]}</span>${id === 1 ? '<span>ITRI｜Vice President and Senior Expert</span>' : ''}</div></div>`;
+    return `<div class="talk-person"><img src="assets/${s[4]}" width="44" height="44" loading="lazy" alt=""><div><strong>${s[1]}</strong><span>${roleHtml(s[2])}</span>${id === 1 ? '<span>ITRI｜Vice President and Senior Expert</span>' : ''}</div></div>`;
   }
 
   const rows = a.rows.map(r => {
