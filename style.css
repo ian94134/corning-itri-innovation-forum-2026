@@ -228,7 +228,6 @@ html[lang="en"] .fact-value { font-size: 18px; }
   .main-nav .btn { order: 1; min-height: 40px; padding: 0 16px; font-size: 14px; }
   .nav-link { order: 3; flex: 1 1 auto; text-align: center; padding: 10px 0 12px; font-size: 14px; }
   .lang-link { flex: 0 0 auto; min-height: 36px; margin-bottom: 4px; padding: 0 12px; }
-  html[lang="en"] .forum-tag { left: 0; right: 0; top: auto; bottom: 0; padding: 3px 0; border-radius: 0; letter-spacing: 0; text-align: center; white-space: nowrap; }
 
   .hero-title { position: relative; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal; padding: 22px var(--gutter) 24px; background: var(--navy); border-top: 1px solid rgba(255,255,255,.12); }
 
@@ -244,11 +243,11 @@ html[lang="en"] .fact-value { font-size: 18px; }
   .about-body .notice { font-size: 16px; }
 
   .speaker-grid { grid-template-columns: 1fr; gap: 14px; }
-  .speaker-card { flex-direction: row; align-items: stretch; }
+  .speaker-card { flex-direction: row; align-items: flex-start; }
   .speaker-card:hover { transform: none; }
-  .speaker-photo { flex: 0 0 108px; aspect-ratio: auto; }
-  .speaker-photo img { position: absolute; inset: 0; }
-  .forum-tag { left: 6px; top: 6px; right: auto; padding: 2px 7px; font-size: 12px; }
+  .speaker-photo { flex: 0 0 116px; aspect-ratio: auto; background: none; }
+  .speaker-photo img { height: auto; aspect-ratio: 1 / 1; }
+  .forum-tag { position: static; display: block; padding: 3px 2px; border-radius: 0; background: var(--navy); font-size: 12px; letter-spacing: 0; text-align: center; white-space: nowrap; }
   .speaker-body { padding: 14px 16px 16px; }
   .speaker-body h3 { font-size: 18px; }
   .speaker-title { font-size: 14px; }
