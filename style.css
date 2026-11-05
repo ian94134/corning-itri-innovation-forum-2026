@@ -56,7 +56,9 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .main-nav { display: flex; align-items: center; gap: 28px; font-size: 15px; font-weight: 500; }
 .nav-link { color: #D6E0F5; text-decoration: none; padding: 10px 0; border-bottom: 2px solid transparent; }
 .nav-link:hover { color: #fff; border-color: var(--gold); }
-.lang-link { font-weight: 700; }
+.lang-link { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border: 1.5px solid rgba(255,255,255,.75); border-radius: 999px; color: #fff; font-weight: 700; white-space: nowrap; transition: background-color .18s ease, color .18s ease; }
+.lang-link:hover { background: #fff; border-color: #fff; color: var(--night); }
+.lang-link .ico { font-size: 16px; }
 
 /* Hero */
 /* 原圖僅 1100px：清晰圖最寬 1280px 置中，兩側以同圖模糊延伸，避免過度放大而模糊 */
@@ -205,12 +207,13 @@ html[lang="en"] .fact-value { font-size: 18px; }
   .fact:nth-child(-n+2) { border-bottom: 1px solid var(--line-soft); }
 }
 @media (max-width: 900px) and (min-width: 701px) {
-  html[lang="en"] .brand-sub { display: none; }
-  html[lang="en"] .main-nav { gap: 14px !important; font-size: 14px; }
-  html[lang="en"] .main-nav .btn { padding: 0 14px; }
+  .header-inner { column-gap: 12px; }
+  .brand-sub { display: none; }
+  .main-nav { gap: 10px; font-size: 14px; }
+  .main-nav .btn { padding: 0 14px; }
+  .lang-link { padding: 0 10px; }
 }
 @media (max-width: 900px) {
-  .main-nav { gap: 20px; }
   .tab { padding: 14px 16px; }
 }
 
@@ -224,6 +227,7 @@ html[lang="en"] .fact-value { font-size: 18px; }
   .main-nav { display: contents; }
   .main-nav .btn { order: 1; min-height: 40px; padding: 0 16px; font-size: 14px; }
   .nav-link { order: 3; flex: 1 1 auto; text-align: center; padding: 10px 0 12px; font-size: 14px; }
+  .lang-link { flex: 0 0 auto; min-height: 36px; margin-bottom: 4px; padding: 0 12px; }
   html[lang="en"] .forum-tag { left: 0; right: 0; top: auto; bottom: 0; padding: 3px 0; border-radius: 0; letter-spacing: 0; text-align: center; white-space: nowrap; }
 
   .hero-title { position: relative; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal; padding: 22px var(--gutter) 24px; background: var(--navy); border-top: 1px solid rgba(255,255,255,.12); }
