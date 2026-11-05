@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+/* 記住手動切換到英文版的選擇；英文版網址本身不做自動轉址 */
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (q.get('lang') !== 'en') return;
+  try { localStorage.setItem('corningItri2026Lang', 'en'); } catch (e) {}
+  q.delete('lang');
+  history.replaceState(null, '', location.pathname + (q.toString() ? '?' + q : '') + location.hash);
+})();
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Corning × ITRI: 20 Years of Partnership and Innovation Forum</title>
 <meta name="description" content="The Corning × ITRI 20 Years of Partnership and Innovation Forum brings together industry leaders and technology experts to explore megatrends and emerging technologies. Thursday, November 19, 2026, ITRI Building 51.">
 <meta property="og:image" content="../assets/header.jpg">
 <meta name="theme-color" content="#061633">
-<link rel="alternate" hreflang="zh-Hant" href="https://ian94134.github.io/corning-itri-innovation-forum-2026/">
-<link rel="alternate" hreflang="en" href="https://ian94134.github.io/corning-itri-innovation-forum-2026/en/">
+<link rel="alternate" hreflang="zh-Hant" href="../index.html">
+<link rel="alternate" hreflang="en" href="index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
@@ -27,7 +37,7 @@
       <a class="nav-link" href="#about">Introduction</a>
       <a class="nav-link" href="#speakers">Speakers</a>
       <a class="nav-link" href="#agenda">Agenda</a>
-      <a class="nav-link lang-link" href="../" hreflang="zh-Hant" lang="zh-Hant" aria-label="切換至中文版"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>中文</a>
+      <a class="nav-link lang-link" href="../index.html?lang=zh" hreflang="zh-Hant" lang="zh-Hant" aria-label="切換至中文版"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>中文</a>
       <a class="btn btn-gold btn-pill" href="https://itricollege.surveycake.biz/s/yvpVw" target="_blank" rel="noopener">Join the Forum<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
     </nav>
   </div>

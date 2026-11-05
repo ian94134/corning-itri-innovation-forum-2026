@@ -6,6 +6,7 @@
 - GitHub 儲存庫：<https://github.com/ian94134/corning-itri-innovation-forum-2026>
 - GitHub Pages：中文版 <https://ian94134.github.io/corning-itri-innovation-forum-2026/>，英文版 <https://ian94134.github.io/corning-itri-innovation-forum-2026/en/>
 - GitHub Pages 由 `main` 分支的 `/ (root)` 自動部署。推送後請確認 Actions 的 `pages-build-deployment` 成功，並開啟上線網址檢查。
+- 正式上傳位置：<https://college.itri.org.tw/edm/D3/010/26/index.html>（英文版 `en/index.html`），由使用者手動上傳覆蓋。站內路徑一律使用相對路徑並明確寫出 `index.html`，不可使用 `/` 開頭的絕對路徑。
 - 另有既有 Sites 網址：<https://corning-itri-innovation-2026.iccoursedomain5.chatgpt.site/>。後續以本儲存庫和 GitHub Pages 為主要交付版本。
 
 ## 使用者已確認的設計要求
@@ -16,7 +17,7 @@
 - 議程需清楚、精緻；時間區間以一行呈現，講者和主題有明確層級。
 - 講者卡片中的職稱與下方分隔線不要留下過大的空白。
 - 不要恢復已移除的「原始 eDM 圖文參考」區塊或頁尾「取消訂閱」文字。
-- 中英文版並存，頁首可互相切換。
+- 中英文版並存，頁首可互相切換。中文主網址依瀏覽器第一語言自動轉址（中文留在中文版，其他語言轉英文版）；手動切換的選擇存於 `localStorage` 的 `corningItri2026Lang` 並優先；直接開啟 `/en/` 不轉址。邏輯在兩個 HTML `<head>` 的內嵌腳本。
 - 保留原始報名連結；兩個語言不同，不可互換。中文版：<https://itricollege.surveycake.biz/s/xNk8z>；英文版：<https://itricollege.surveycake.biz/s/yvpVw>。
 - 英文版沿用與中文版相同的 `assets/header.jpg`，使用者已確認圖上的中文不需更換。
 

@@ -2,13 +2,33 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
+<script>
+/* 語言偵測：手動選擇（?lang= 或已記住的選擇）優先，其次依瀏覽器第一語言；非中文一律轉到英文版 */
+(function () {
+  var q = new URLSearchParams(location.search), choice = q.get('lang'), saved = null;
+  try { saved = localStorage.getItem('corningItri2026Lang'); } catch (e) {}
+  if (choice === 'zh') {
+    try { localStorage.setItem('corningItri2026Lang', 'zh'); } catch (e) {}
+    q.delete('lang');
+    history.replaceState(null, '', location.pathname + (q.toString() ? '?' + q : '') + location.hash);
+    return;
+  }
+  if (saved === 'zh') return;
+  if (saved !== 'en') {
+    if (/bot|crawl|spider|slurp|lighthouse/i.test(navigator.userAgent)) return;
+    var first = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    if (/^zh\b/i.test(first)) return;
+  }
+  location.replace('en/index.html' + location.search + location.hash);
+})();
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>康寧 × 工研院｜攜手20週年創新論壇</title>
 <meta name="description" content="康寧 Corning × 工研院 ITRI 攜手20週年創新論壇，聚焦前瞻趨勢與科技前沿。2026年11月19日，工業技術研究院51館。">
 <meta property="og:image" content="assets/header.jpg">
 <meta name="theme-color" content="#061633">
-<link rel="alternate" hreflang="zh-Hant" href="https://ian94134.github.io/corning-itri-innovation-forum-2026/">
-<link rel="alternate" hreflang="en" href="https://ian94134.github.io/corning-itri-innovation-forum-2026/en/">
+<link rel="alternate" hreflang="zh-Hant" href="index.html">
+<link rel="alternate" hreflang="en" href="en/index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
@@ -27,7 +47,7 @@
       <a class="nav-link" href="#about">論壇引言</a>
       <a class="nav-link" href="#speakers">演講者</a>
       <a class="nav-link" href="#agenda">活動議程</a>
-      <a class="nav-link lang-link" href="en/" hreflang="en" lang="en" aria-label="Switch to English"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>English</a>
+      <a class="nav-link lang-link" href="en/index.html?lang=en" hreflang="en" lang="en" aria-label="Switch to English"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>English</a>
       <a class="btn btn-gold btn-pill" href="https://itricollege.surveycake.biz/s/xNk8z" target="_blank" rel="noopener">前往報名<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
     </nav>
   </div>
