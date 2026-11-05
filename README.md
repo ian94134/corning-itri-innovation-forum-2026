@@ -1,10 +1,10 @@
 # 康寧 × 工研院｜攜手20週年創新論壇
 
-2026 年論壇網站的靜態原始碼。首頁為 `index.html`，使用 `style.css`、`data.js`、`app.js` 與 `assets/`。
+2026 年論壇網站的靜態原始碼。中文版為 `index.html` 與 `data.js`，英文版為 `en/index.html` 與 `en/data.js`，共用 `style.css`、`app.js` 與 `assets/`。
 
 網站包含論壇介紹、14 位講者、三場論壇的 25 筆議程，以及原始報名連結。桌面與手機版採響應式排版。
 
-[瀏覽 GitHub Pages 網站](https://ian94134.github.io/corning-itri-innovation-forum-2026/)
+[中文版](https://ian94134.github.io/corning-itri-innovation-forum-2026/)｜[English](https://ian94134.github.io/corning-itri-innovation-forum-2026/en/)
 
 Claude Code 接手資訊請見 [CLAUDE.md](CLAUDE.md)。
 

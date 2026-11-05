@@ -1,0 +1,21 @@
+const speakers=[
+['Plenary Session','Dr. Claudio Mazzali','Corning｜Vice President, Global Research','The Science-to-Factory Continuum: Innovation, Collaboration, and Performance at Scale','Corning.Dr.-Claudio-Mazzali.jpg'],
+['Plenary Session','Dr. Chih-I Wu','ITRI｜Vice President and Senior Expert','Megatrends & Strategic Vision: Shaping the Next Decade','ITRI.吳志毅_Dr.-Chih-I-Wu.jpg'],
+['Forum I','Dr. Robert Lee','Corning｜Program Director, Co-Packaged Optics','Glass-Based Platform Future in Co-Packaged Optics','Corning.Dr.-Robert-Lee.jpg'],
+['Forum I','Dr. Ray Hua Horng','ITRI｜Chief Technology Officer, EOSL','High-Speed SiPh System by Heterogeneous Technology','ITRI.洪瑞華_Dr.-Ray-Hua-Horng.jpg'],
+['Forum I','Dr. Jay Zhang','Corning｜Business Development Director, P&W','Innovative Materials Solutions for Advanced Packaging','Corning.Dr-Jay-Zhang.jpg'],
+['Forum I','Dr. Robert Lo','ITRI｜Deputy Director, EOSL','Wafer-Level System Integration for 3D-Stacked Chiplets & Materials Challenges','ITRI.駱韋仲_Dr.-Robert-Lo.jpg'],
+['Forum I','Dr. Siavash Yazdanfar','Corning｜Director, Device & System','Integration of advanced materials into devices and systems','Corning.Dr.-Siavash-Yazdanfar.jpg'],
+['Forum I','Dr. Stephen Wang','ITRI｜Deputy Division Director, MMSL','Development of a Digital Twin for Thin Film Deposition Process and Advanced Device Integration','ITRI.王慶鈞_Dr.jpg'],
+['Forum II','Dr. Marie-Maud Béar','Corning｜CLS Portfolio Leader','Advancing Cell and Gene Therapy and 3D cell culture: Opportunities, Translation Challenges, and Enabling Technologies','Corning.Dr.-Marie-Maud-Béar.jpg'],
+['Forum II','Dr. Min-Yuan Chou','ITRI｜Deputy Director, BDL','Introduction to Biotherapeutics R&D at ITRI','ITRI.周民元_Dr.jpg'],
+['Forum II','Dr. Felice Cheng','ITRI｜Division Director, BDL','Tailoring Ionizable Lipids for Next-Gen LNP Therapeutics','ITRI.鄭淑珍_Dr.-Felice-Cheng.jpg'],
+['Forum II','Dr. Roger Chen','ITRI｜Deputy Division Director, BDL','Engineering Reproducible Microphysiological Systems for NAMs','ITRI.陳瑜帆_Dr.-Roger-Chen.jpg'],
+['Forum II','Sam Zoubi','Corning｜Director, Fluid Dynamics & Process Modeling','Digital Twin Journey','Corning.Dr.-Sam-Zoubi.jpg'],
+['Forum II','Dr. Jiun Chen','ITRI｜Director of Marketing and Business Development, MMSL','Overview of MMSL and Manufacturing Driven by AI','ITRI.陳俊_Jiun-Chen.jpg']];
+const agendas=[
+{heading:'Plenary Session',subtitle:'',kicker:'CORNING × ITRI',location:'09:00–12:30 | Location: Building 51, Room 116 (1F) · Poster & Exhibit Networking Session with Lunch: 2F Lobby',rows:[
+['09:00–09:30','Opening Remarks'],['09:30–09:40','Group Photo'],['09:40–10:10','Megatrends – Corning',0],['10:10–10:40','Megatrends – ITRI',1],['10:40–11:10','Panel Discussion'],['11:10–11:20','Break'],['11:20–12:30','Poster & Exhibit Networking Session with Lunch',null,'This session is designed primarily for poster and exhibit networking, with light refreshments provided. Due to limited space, access is available only to participants who have registered for this session.']]},
+{heading:'Forum I',kicker:'CORNING × ITRI',subtitle:'Future Compute / Photonics / Semiconductor Integration',location:'Location | Building 51, Room 116 (1F)',rows:[['12:30–13:10','CPO – Corning',2],['13:10–13:50','CPO – ITRI',3],['13:50–14:00','Break'],['14:00–14:40','Advanced Packaging – Corning',4],['14:40–15:20','Advanced Packaging – ITRI',5],['15:20–15:30','Break'],['15:30–16:10','Device integration – Corning',6],['16:10–16:50','Device integration – ITRI',7],['16:50–17:20','Forum I QA Panel'],['17:20–17:30','Closing & Group Photo']]},
+{heading:'Forum II',kicker:'CORNING × ITRI',subtitle:'Life Sciences / AI-enabled Manufacturing',location:'Location | Building 51, Room 3A (3F)',rows:[['12:30–13:10','Life Sciences – Corning',8],['13:10–13:55','Life Sciences – ITRI',[9,10,11]],['13:55–14:25','Life Sciences QA Panel'],['14:25–14:40','Break'],['14:40–15:20','AI & Smart Manufacturing – Corning',12],['15:20–16:00','AI & Smart Manufacturing – ITRI',13],['16:00–16:30','AI QA Panel'],['16:30–16:40','Closing & Group Photo']]}];
+const ui={assetBase:'../assets/',allSpeakers:'All Speakers',speakerCount:n=>n+(n===1?' speaker':' speakers'),topicLabel:'Topic',breakLabel:'Break',minutes:'min',roleSep:' | '};
